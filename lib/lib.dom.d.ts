@@ -11062,11 +11062,11 @@ interface NotificationEventMap {
 }
 
 /** This Notifications API interface is used to configure and display desktop notifications to the user. */
-interface Notification extends EventTarget {
+interface Notification<T> extends EventTarget {
     readonly actions: ReadonlyArray<NotificationAction>;
     readonly badge: string;
     readonly body: string;
-    readonly data: any;
+    readonly data: T;
     readonly dir: NotificationDirection;
     readonly icon: string;
     readonly image: string;
